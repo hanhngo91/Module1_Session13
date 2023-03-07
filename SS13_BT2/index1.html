@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS13_Luyện tập vòng lặp FOR</title>
+</head>
+
+<body>
+    <script>
+        // tam giác 
+        let a = 9;
+        for (i = 0; i <= a; i++) {
+            for (j = 0; j <= i; j++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    
+//----------------------------------------
+        let a2 = 10;
+        for (i = a2; i >= 0; i--) {
+            for (j = 1; j <= i; j++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+
+
+
+//-----------------------------------------
+//      let a = 9;
+        for (i = 0; i <= a; i++) {
+            for (j = 10; j >= 0; j--) {
+                if (j > i) {
+                    document.write("&nbsp&nbsp")
+                } else {
+                    document.write("*");
+                }
+
+            }
+            document.write("<br>");
+        }
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+//--------------------------------------
+        let d = 10;
+        for (i = d; i >= 1; i--) {
+            for (j = d; j >= 0; j--) {
+                if (j < i) {
+                    document.write("*")
+                } else {
+                    document.write("&nbsp&nbsp");
+                }
+
+            }
+            document.write("<br>");
+        }
+
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+        // hình chữ nhật
+        let c = 19
+        for (let i = 0; i <= 4; i++) {
+            if (i == 0) {
+                for (let j = 0; j <= c; j++) {
+                    document.write("* ")
+                }
+                document.write("<br>");
+            }
+            if(i >=1 && i<=3){
+                
+                for (let j = 0; j <= c; j++) {
+                    if(j==0 || j==c){
+                        document.write("* ")
+                    }else{
+                        document.write("&nbsp&nbsp&nbsp")
+                    }
+
+                }
+                document.write("<br>");
+            }
+            if (i == 4) {
+                for (let j = 0; j <= c; j++) {
+                    document.write("* ")
+                }
+                document.write("<br>");
+            }
+        }
+
+
+
+
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+
+        // trái tim
+        let b = "";
+        let c0 = 0;
+        let d5 = 5;
+        let e10 = 10;
+        let f15 = 15;
+        let g20 = 20;
+        let h25 = 25;
+        for (let i = 0; i <= 15; i++) {
+            if (i == 0) {
+                for (let j = 0; j <= 25; j++) {
+                    if (
+                        (j > 0 && j <= d5) ||
+                        (j > e10 && j <= f15) ||
+                        (j > g20 && j <= h25)
+                    ) {
+                        b += "&nbsp &nbsp";
+                    }
+                    if ((j > d5 && j <= e10) || (j > f15 && j <= g20)) {
+                        b += "* ";
+                    }
+                }
+                b += "<br>";
+                d5--;
+                f15--;
+            }
+            if (i > 0 && i <= 3) {
+                for (let j = 0; j <= 25; j++) {
+                    if (j == d5 || j == e10 || j == f15 || j == g20) {
+                        b += "* ";
+                    } else {
+                        b += "&nbsp &nbsp";
+                    }
+                }
+                b += "<br>";
+                d5--;
+                e10++;
+                f15--;
+                g20++;
+            }
+            if (i == 5) {
+                d5++;
+                g20--;
+                for (let j = 0; j <= 25; j++) {
+                    if (j == d5 || j == g20) {
+                        b += "* ";
+                    } else {
+                        b += "&nbsp &nbsp";
+                    }
+                }
+                b += "<br>";
+                d5++;
+                g20--;
+            }
+            if (i > 5) {
+                for (let j = 0; j <= 25; j++) {
+                    if (j == d5 || j == g20) {
+                        b += "*";
+                    } else {
+                        b += "&nbsp &nbsp";
+                    }
+                }
+                b += "<br>";
+                d5++;
+                g20--;
+            }
+        }
+        document.write(b);
+
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+
+        // dãy fibonacci
+        let number1 = 0
+        let number2 = 1
+        let fibonacci = ""
+        for(let i = 0; i<=10;i++){
+            let sum = number1+number2
+            fibonacci+=`${sum}, `
+            number1=number2
+            number2=sum
+        }
+        document.write(`10 số đầu tiên của dãy fibonacci: ${fibonacci}`)
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+
+        // tính giai thừa
+        // let number = Number(prompt("nhập số cần tính"))
+        let number = 10;
+        let sumGiaithua = 1
+        for(let i = number; i >=1; i--){
+            sumGiaithua = sumGiaithua*i
+        }
+        document.write(`giai thừa của số ${number} là: ${sumGiaithua}`)
+    </script>
+
+</body>
+
+</html>

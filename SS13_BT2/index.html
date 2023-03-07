@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành vòng lặp BT2</title>
+</head>
+<body>
+    <script>
+//-----------TAM GIÁC VUÔNG A----------------
+        let a = 9;
+        for(i=0; i<=a; i++){
+            for(j=0; j<=i; j++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+//----------TAM GIÁC VUÔNG B-------------------
+        let b = 10;
+        for(i = b; i>=0; i--){
+            for(j=1; j<=i; j++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+//----------TAM GIÁC VUÔNG C-------------------
+        let c = 9;
+        for (i=0; i<=c; i++){
+            for(j=10; j>=0; j--){
+                if(j>i){
+                    document.write("&nbsp&nbsp");
+                }else{
+                    document.write("*");
+                }
+            }
+            document.write("<br>");
+        }
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    
+//------------TAM GIÁC VUÔNG D----------------
+        let d = 10;
+        for(i=d; i>=1; i--){
+            for (j=d; j>=0; j--){
+                if(j<i){
+                    document.write("*")
+                }else{
+                    document.write("&nbsp&nbsp");
+                }
+            }
+            document.write("<br>");
+        }
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+//------------HÌNH CHỮ NHẬT BIẾT HAI CẠNH LÀ (20*) VÀ (5*)----------------
+        let e = 19;
+        for (i=0; i<=4; i++){
+            if(i==0){
+                for(let j=0; j<=e; j++){
+                    document.write("* ");
+                }
+                document.write("<br>");
+            }
+            if(i>=1 && i<=3){
+                for(j=0; j<=e; j++){
+                    if(j==0 || j==e){
+                        document.write("* ");
+                    }else{
+                        document.write("&nbsp&nbsp&nbsp")
+                    }
+                }
+                document.write("<br>");
+            }
+            if(i==4){
+                for(let j=0; j<=e; j++){
+                    document.write("* ");
+                }
+                document.write("<br>");
+            }
+        }
+
+    </script>
+</body>
+</html>
